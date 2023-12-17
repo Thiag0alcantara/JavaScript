@@ -1,25 +1,33 @@
-function carregar() {
-    var msg = window.document.getElementById('msg')
-    var img = window.document.getElementById('imagem')
+function verificar(){
     var data = new Date()
-    var hora = data.getHours()
-    
-    msg.innerHTML = `Agora são ${hora} horas`
-    
-    if(hora >= 0 && hora < 12){ 
-        //bom dia
-        img.src = 'imagem/manha.png' 
-        document.body.style.background = '#ecec51b3'
-        
-    }else if(hora >=12 && hora <= 18){
-        // boa tarde
-        img.src = 'imagem/tarde.png' 
-        document.body.style.background ='#ff001ea9'
-
+    var ano = data.getFullYear()
+    var fano = document.getElementById('txtano')
+    var res = document.getElementById('res')
+    if(fano.value.length == 0 || Number(fano.value) > ano){
+        window.alert('[Erro] Verifique os dados e tente novamente!')
     }else{
-        //boa noite
-        img.src =  'imagem/noite.png'
-        document.body.style.background ='#4a024a '
-    }
+        var fsex = document.getElementsByTagName('radsex')
+        var idade = ano - Number(fano.value)
+        var genero = ''
+        var genero_masculino = document.getElementById('masculino')
+        var genero_feminino = document.getElementById('feminino')
+        if (genero_masculino.checked) {
+            var genero = 'Homem'
+        } else if (genero_feminino.checked) {
+            var genero = 'Mulher'
+        }
         
+        
+        res.innerHTML = `Detectamos ${genero} com ${idade} anos.`
     }
+}
+        
+            
+            
+        
+        
+        
+        
+        
+
+    
