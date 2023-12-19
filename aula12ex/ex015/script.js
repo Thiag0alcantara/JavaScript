@@ -31,13 +31,29 @@ function verificar(){
 
             }
 
-
-
+            
+            
         } else if (genero_feminino.checked) {
             var genero = 'Mulher'
-            
-        }
+            if(idade >=0 && idade < 10){
+                //Criança
+                img.setAttribute('src', 'imagem/criancaM.jpg')
+            }else if(idade < 25){
+                img.setAttribute('src','imagem/jovemM.jpg')
+                //jovem
+            }else if(idade < 50){
+                img.setAttribute('src','imagem/adultoM.jpg')
+                //Adulto
 
+            }else {
+                //idoso
+                img.setAttribute('src','imagem/idosaM.jpg')
+            }
+
+              
+        }
+            
+        
 
         
         
