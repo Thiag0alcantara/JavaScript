@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>somando valores</title>
+    <style>
+    div#res{
+            color: red;
+            font-size: 20pt;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        Somando valores
+    </h1>
+    <input type="number" name="caixa1" id="caixa1"> +
+    <input type="number" name="caixa2" id="caixa2">
+    <input type="button" value="SOMAR" onclick="somar()"> 
+
+    <div id="res">
+        Resultado
+    </div>
+    <script>
+        function somar(){
+            var c1 = window.document.getElementById('caixa1')
+            var c2 = window.document.getElementById('caixa2')
+            var res = window.document.getElementById('res')
+            c1 = Number(c1.value)
+            c2 = Number(c2.value)//da pra indicar que a variavel é um numero sem criar outra como ele fez, chamei a variavel c1 e c2
+            var s = c1+c2
+            res.innerHTML = (`A soma entre ${c1} e ${c2} é igual a  ${s}`)  
+
+        }   
+
+    </script>
+    
+</body>
+</html>
