@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pais</title>
+</head>
+<body>
+    <h1>
+        Nacionalidade
+    </h1>
+    Digite o pais onde você vive : <input type="text" name="nacio" id="nacio">
+    <input type="button" value="Verificar" onclick="verificar()">
+    <div id="res">
+
+    </div>
+
+    
+</body>
+<script>
+    function verificar(){
+        var n1 = window.document.getElementById('nacio')
+        var n1 = (nacio.value)
+        var res = window.document.getElementById('res')
+        
+        res.innerHTML =`<p>voce vive em <strong>${n1}</strong</p>`
+        if(n1 == 'brasil'){
+            res.innerHTML +=`Você é <strong>brasileiro</strong>`     	
+        }else{
+            res.innerHTML += `Você é <strong>GRINGO</strong> `
+        }
+
+    }
+</script>
+</html>
