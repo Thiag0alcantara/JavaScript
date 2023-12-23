@@ -1,11 +1,10 @@
 body{
     background: rgb(69, 106, 254);
     font: normal 15pt arial ;
-    
 
 }
 header{
-    color: black;
+    color: white;
     text-align: center;
 }
 section{
@@ -16,18 +15,7 @@ section{
     padding: 15px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.326);
 
-}`
-div{
-    text-align: center;
-    
-
 }
-div#msg{
-    text-align: center;
-    padding: 10px;
-}
-
-
 footer{
     color: white;
     text-align: center;

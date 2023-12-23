@@ -1,25 +1,20 @@
-function carregar() {
-    var msg = window.document.getElementById('msg')
-    var img = window.document.getElementById('imagem')
-    var data = new Date()
-    var hora = data.getHours()
-    
-    msg.innerHTML = `Agora são ${hora} horas`
-    
-    if(hora >= 0 && hora < 12){ 
-        //bom dia
-        img.src = 'imagem/manha.png' 
-        document.body.style.background = '#ecec51b3'
-        
-    }else if(hora >=12 && hora <= 18){
-        // boa tarde
-        img.src = 'imagem/tarde.png' 
-        document.body.style.background ='#ff001ea9'
-
+function contar(){
+    let inicio = window.document.getElementById('txti')
+    let fim = window.document.getElementById('txtf')
+    let passo = window.document.getElementById('txtp')
+    let res = window.document.getElementById('res')
+    if(inicio.value.length == 0 || fim.value.length == 0 || passo.value.length == 0 ){
+        window.alert('[ERRO] Faltam dados!')
     }else{
-        //boa noite
-        img.src =  'imagem/noite.png'
-        document.body.style.background ='#4a024a '
-    }
+        res.innerHTML = `contando:`
+        let i = Number(inicio.value) 
+        let f= Number(fim.value)
+        let p= Number(passo.value)
+        
+        for(let c = i; c <= f; c+= p){
+            res.innerHTML +=` ${c}  \u{1f449}`
+        }
         
     }
+        
+}

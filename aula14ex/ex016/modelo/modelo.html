@@ -3,30 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modelo de Exercício</title>
+    <title>Super contador </title>
     <link rel="stylesheet" href="estilo.css">
 </head>
-<body onload="carregar()">
+<body>
     <header>
-        <h1>Hora do Dia</h1>
+        <h1>Vamos contar</h1>
     </header>
     <section>
-        <div id="msg">
-            <p>aqui vai aparecer a mensagem...</p>
-
+        <div>
+            <p>Inicio : <input type="number" name="Inicio" id="txti"></p>
+            <p>Fim : <input type="number" name="Fim" id="txtf"></p>
+            <p>Passo : <input type="number" name="passo" id="txtp"></p>
+            <p><input type="button" value="contar" onclick="contar()"></p>
         </div>
-        <div id="foto">
-            <img id="imagem" src="imagem/manha.png" alt="foto manha">
+        <div id="res">
+            <p>preparando a contagem</p>
 
         </div>
 
     </section>
     <footer>
-        <p>&copy;CursoemVideo</p>
+        <p>&copy;CursoEmVideo</p>
     </footer>
-    <script>
-        
-    </script>
     <script src="script.js"></script>
 </body>
 </html>
