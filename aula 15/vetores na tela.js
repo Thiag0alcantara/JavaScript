@@ -8,6 +8,12 @@ console.log(valores[3])
 console.log(valores[4])
 console.log(valores[5])
 */
-    for(let pos=0;pos < valores.length;pos++){
+    /*
+    for(let pos = 0;pos < valores.length;pos++){
         console.log(`a posição de ${pos} tem valor de ${valores[pos]}`)
     }
+    */
+
+for(let pos in valores){
+    console.log(`a posição de ${pos} tem valore de ${valores[pos]}`)
+}
