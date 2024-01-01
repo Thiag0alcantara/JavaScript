@@ -1,7 +1,7 @@
-let num = document.querySelector('input#fnum')
-let lista = document.querySelector('select#flista')
-let res = document.querySelector('div#res')
-let valores = []    
+    let num = document.querySelector('input#fnum')
+    let lista = document.querySelector('select#flista')
+    let res = document.querySelector('div#res')
+    let valores = []    
     function isNumero(n){
         if(Number(n) >= 1 && Number(n) <= 100){
             return true
@@ -32,7 +32,7 @@ let valores = []
     num.value = ''
     num.focus()
 }
-function finalizar(){
+    function finalizar(){
     if(valores.length == 0){
         window.alert('Adicione valores antes de finalizar')
     }else{
