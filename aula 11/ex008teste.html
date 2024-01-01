@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de Velocidade</title>
+    <style>
+        body{
+            background-color: aqua;
+            text-align: center;
+            font: normal 20pt arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        Teste de Velocidade
+    </h1>
+    <P>Radar de 60 km/h</P>
+    
+    <div>
+        <p>Verificação de velocidade : <input type="number" name="velocidade" id="velo" >km/h
+         <input type="button" value="Verificar"  onclick="verificar()"></p>
+    </div>
+    <div id="res">
+    </div>
+</body>
+<script>
+ 
+ function verificar(){
+    let velocidade = window.document.getElementById('velo')
+    let res = window.document.getElementById('res')
+    let vel = Number(velocidade.value)
+    if(velocidade.value.length == 0){
+        window.alert('[ERRO] Digite um número válido !')
+    }if(vel >=61) {
+        
+        res.innerHTML = `Sua velocidade atual é de <strong>${vel}km/h, Você foi multado!</strong>`
+        
+    }else{
+        res.innerHTML = ''
+        res.innerHTML = `Sua velocidade atual é de <strong>${vel}km/h</strong>,Você está dentro da velocidade permitida !<br> </br>`
+        res.innerHTML += `Use Cinto de segurança,Dirija com atenção!`
+    }
+    velocidade.value =''
+    velocidade.focus()
+    
+
+    
+
+ }
+</script>
+</html>
