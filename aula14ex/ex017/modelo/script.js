@@ -10,9 +10,9 @@ function tabuada(){
             tab.innerHTML = ''
             while(c <= 10){
                 let item = document.createElement('option')
+                tab.appendChild(item)
                 item.text = `${n} x ${c} = ${n*c}`
                 c++
-                tab.appendChild(item)
             }
         }
 }
